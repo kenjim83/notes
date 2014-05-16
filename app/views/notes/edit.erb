@@ -1,0 +1,9 @@
+<h1>Edit note</h1>
+
+<form method="post" action="/notes/new">
+  Title<input type="text" name="title" value="<%= @note.title %>"></input><br>
+  Note<textarea name="content" rows="4" cols="50" placeholder="Note..."><%= @note.content %></textarea><br>
+  <input type="submit" value="Update Note">
+</form>
+
+<a href="/notes">back to notes</a>

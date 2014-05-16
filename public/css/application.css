@@ -1,0 +1,32 @@
+body {
+  background-color: #c0caff;
+}
+
+/*#new_note {
+  padding: 20px 20px;
+}*/
+
+h1 span {
+  color: #C0C0C0;
+  font-size: 0.5em;
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  background-color: white;
+}
+
+
+th {
+  color: white;
+  width: 600px;
+  text-align: left;
+  background-color: #707070;
+}
+
+td {
+ white-space: nowrap;
+}

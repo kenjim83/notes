@@ -1,0 +1,28 @@
+<h1>Notes <span>by Kenji.</span></h1>
+
+<a href="/notes/new" id="new_note">New note</a><br><br>
+
+<% if @notes %>
+  <table>
+    <tr>
+      <th>Title</td>
+      <th>Content</td>
+      <th>Created</td>
+      <th></td>
+      <th></td>
+    </tr>
+  <% @notes.each do |note| %>
+    <tr>
+      <td><a href="/notes/<%= note.id %>"><%= note.title %></a></td>
+      <td><%= note.content.length > 15 ? note.content[0..15] + '...' : note.content  %></td>
+      <td><%= note.created_at.strftime('%m/%d/%y') %></td>
+      <td><a href="/notes/<%= note.id %>/edit">Edit</td>
+      <td><a href="/notes/<%= note.id %>/delete">Delete</td>
+    </tr>
+  <% end %>
+  </table>
+
+
+<% else %>
+  <p>There are no notes here</p>
+<% end %>
